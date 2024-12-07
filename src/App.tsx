@@ -88,7 +88,7 @@ function App() {
                 how we'd treat our own.
               </h3>
               <p className="text-[#495057] leading-relaxed">
-                Located in the heart of Burbank, BB Dental Care has been a premier location for close to 30 years and is proud to serve the local community, the surrounding areas and our dedicated patients, who travel from as far as Los Angeles and Glendale.
+                Located in the heart of Burbank, BB Dental Care has been a premier location for your dental needs, and is proud to serve the local community, the surrounding areas and our dedicated patients, who travel from as far as Los Angeles and Glendale.
               </p>
               <p className="text-[#495057] leading-relaxed">
                 We are a caring and compassionate family dental practice and work hard as a team to offer you a friendly and relaxing service.
