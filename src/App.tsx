@@ -14,7 +14,6 @@ function App() {
             <a href="#treatments" className="hover:text-[#46756F] transition-colors">Treatments</a>
             <a href="#about" className="hover:text-[#46756F] transition-colors">About Us</a>
             <a href="#testimonials" className="hover:text-[#46756F] transition-colors">Success Stories</a>
-            <a href="#pricing" className="hover:text-[#46756F] transition-colors">Pricing</a>
             <a href="tel:+18182563060" className="flex items-center gap-2 text-[#46756F] hover:text-[#598A84] transition-colors">
               <Phone size={18} />
               <span>(818) 256-3060</span>
