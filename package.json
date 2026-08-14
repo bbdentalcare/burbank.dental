@@ -10,13 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.2.2"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "npm",
-      "version": "12.0.2",
-      "onFail": "download"
-    }
+    "@jdevalk/astro-seo-graph": "^2.2.0",
+    "@jdevalk/seo-graph-core": "^0.7.0",
+    "astro": "^7.2.2",
+    "schema-dts": "^2.0.0"
   }
 }
