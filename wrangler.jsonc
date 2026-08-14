@@ -11,6 +11,7 @@
     { "pattern": "burbank.dental/*", "zone_id": "97e61eb4335398bbe9147560b242ba65" },
     { "pattern": "www.burbank.dental/*", "zone_id": "97e61eb4335398bbe9147560b242ba65" }
   ],
+  "workers_dev": true,
   "observability": {
     "enabled": true
   }
