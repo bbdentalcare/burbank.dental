@@ -1,0 +1,297 @@
+---
+// Hero.astro
+import { Image } from 'astro:assets';
+import heroImg from '../assets/images/hero.avif';
+import bSymbolSvg from '../assets/images/b-symbol.svg';
+---
+
+<section class="hero-section">
+  <div class="container hero-grid">
+    <!-- Left Hero Content -->
+    <div class="hero-content">
+      <div class="hero-badge-wrap">
+        <span class="badge badge-gold">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>5.0 Star Rated Burbank Practice</span>
+        </span>
+        <span class="badge badge-primary">Now Welcoming Patients</span>
+      </div>
+
+      <h1 class="hero-title">
+        Where Modern Dentistry & <span class="font-serif italic-accent">Wellness Collide</span> in Burbank
+      </h1>
+
+      <p class="hero-subtext">
+        Welcome to <strong>BB Dental Care</strong> on Burbank Blvd. We combine state-of-the-art dental technology, spa-like comforts, and personalized facial aesthetics for the entire family.
+      </p>
+
+      <!-- Key Quick Value Props -->
+      <div class="hero-props">
+        <div class="prop-item">
+          <svg class="prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>All PPO Plans Accepted</span>
+        </div>
+        <div class="prop-item">
+          <svg class="prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>English • Português • Español</span>
+        </div>
+        <div class="prop-item">
+          <svg class="prop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Same-Day Emergency Care</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="hero-actions">
+        <a href="https://appointments.bbdentalcare.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          <span>Book an Appointment</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <a href="tel:8182563060" class="btn btn-light btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>(818) 256-3060</span>
+        </a>
+      </div>
+
+      <div class="hero-footnote">
+        <span>📍 916 W Burbank Blvd. Suite A, Burbank, CA 91506</span>
+      </div>
+    </div>
+
+    <!-- Right Hero Media & Cards -->
+    <div class="hero-visual">
+      <div class="media-container">
+        <Image 
+          src={heroImg} 
+          alt="BB Dental Care Modern Burbank Dental Clinic" 
+          width={600} 
+          height={420} 
+          class="hero-img"
+          loading="eager"
+        />
+
+        <!-- Floating Badge 1: Doctor Info -->
+        <div class="floating-badge badge-top">
+          <div class="doctor-badge-avatar">
+            <Image src={bSymbolSvg} alt="BB Dental Care Symbol" width={32} height={32} />
+          </div>
+          <div>
+            <p class="badge-title">Dr. Bryanna Hubbard, DDS</p>
+            <p class="badge-desc">UCLA School of Dentistry Background</p>
+          </div>
+        </div>
+
+        <!-- Floating Badge 2: Amenities -->
+        <div class="floating-badge badge-bottom">
+          <div class="pulse-icon">✨</div>
+          <div>
+            <p class="badge-title">Spa-Like Comfort</p>
+            <p class="badge-desc">Aromatherapy • Netflix • Warm Blankets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    padding: 3.5rem 0 4.5rem;
+    background: linear-gradient(180deg, #F5F4F1 0%, #edf4f4 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-badge-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--brand-main);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .italic-accent {
+    color: var(--brand-primary);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .hero-subtext {
+    font-size: 1.15rem;
+    color: var(--brand-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-props {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .prop-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: var(--brand-main);
+  }
+
+  .prop-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--brand-primary);
+    stroke-width: 3;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-footnote {
+    font-size: 0.9rem;
+    color: var(--brand-muted);
+    font-weight: 500;
+  }
+
+  /* Right Visual */
+  .hero-visual {
+    position: relative;
+  }
+
+  .media-container {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: visible;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 50px rgba(0, 120, 111, 0.15);
+    border: 3px solid #ffffff;
+    object-fit: cover;
+  }
+
+  .floating-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--brand-border);
+    padding: 0.85rem 1.15rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 280px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .badge-top {
+    top: -15px;
+    left: -20px;
+  }
+
+  .badge-bottom {
+    bottom: -20px;
+    right: -15px;
+    animation-delay: 2s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .doctor-badge-avatar {
+    width: 38px;
+    height: 38px;
+    background: var(--brand-primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pulse-icon {
+    font-size: 1.5rem;
+  }
+
+  .badge-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--brand-main);
+    line-height: 1.2;
+  }
+
+  .badge-desc {
+    font-size: 0.75rem;
+    color: var(--brand-muted);
+    line-height: 1.3;
+  }
+
+  @media (max-width: 992px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hero-section {
+      padding: 2.5rem 0 3.5rem;
+    }
+
+    .floating-badge {
+      position: static;
+      margin-top: 1rem;
+      max-width: 100%;
+      animation: none;
+    }
+
+    .badge-top, .badge-bottom {
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+</style>

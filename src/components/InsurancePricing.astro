@@ -1,0 +1,223 @@
+---
+// InsurancePricing.astro
+import { Image } from 'astro:assets';
+import deltaDentalImg from '../assets/images/delta-dental.avif';
+import metlifeImg from '../assets/images/metlife.avif';
+import unitedHealthcareImg from '../assets/images/united-healthcare.avif';
+import guardianImg from '../assets/images/guardian.avif';
+import humanaImg from '../assets/images/humana.avif';
+
+const insuranceLogos = [
+  { name: "Delta Dental", src: deltaDentalImg },
+  { name: "MetLife", src: metlifeImg },
+  { name: "UnitedHealthcare", src: unitedHealthcareImg },
+  { name: "Guardian", src: guardianImg },
+  { name: "Humana", src: humanaImg }
+];
+---
+
+<section class="insurance-section section" id="insurance">
+  <div class="container">
+    <div class="insurance-box">
+      <div class="insurance-grid">
+        <!-- Left Content -->
+        <div class="insurance-content">
+          <span class="badge badge-primary">Transparent & Accessible Care</span>
+          <h2 class="insurance-title">
+            We Accept All Major <span class="text-gradient">Dental PPO Plans</span>
+          </h2>
+          <p class="insurance-desc">
+            We partner with and accept all major Dental PPO insurance providers. Our dedicated front desk team handles claims directly to maximize your annual insurance benefits and reduce out-of-pocket costs.
+          </p>
+
+          <div class="membership-callout">
+            <div class="membership-icon">💡</div>
+            <div>
+              <h4 class="membership-title">No Dental Insurance? No Problem!</h4>
+              <p class="membership-text">
+                Join our affordable in-house Dental Wellness Plan for low monthly payments covering all routine cleanings, comprehensive exams, and exclusive discounts on all procedures.
+              </p>
+            </div>
+          </div>
+
+          <div class="insurance-btn-group">
+            <a href="https://bbdentalcare.com/insurance" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Verify Your Insurance on bbdentalcare.com</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="tel:8182563060" class="btn btn-light">
+              <span>Call Front Desk for Verification</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Insurance Partners Grid -->
+        <div class="insurance-logos-card">
+          <h3 class="partners-title">Accepted PPO Networks</h3>
+          <p class="partners-sub">And many other major regional & national dental plans</p>
+          
+          <div class="logos-grid">
+            {insuranceLogos.map((logo) => (
+              <div class="logo-box">
+                <Image src={logo.src} alt={logo.name} class="partner-img" />
+              </div>
+            ))}
+          </div>
+
+          <div class="financing-tag">
+            <span>✨ 0% APR Financing & Payment Plans Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .insurance-section {
+    background-color: var(--brand-bg);
+  }
+
+  .insurance-box {
+    background: #ffffff;
+    border: 1px solid var(--brand-border);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .insurance-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .insurance-title {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+    font-weight: 800;
+    color: var(--brand-main);
+    margin: 0.85rem 0 1.25rem;
+    line-height: 1.2;
+  }
+
+  .insurance-desc {
+    font-size: 1.05rem;
+    color: var(--brand-secondary);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .membership-callout {
+    background: var(--brand-bg);
+    border-left: 4px solid var(--brand-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .membership-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  .membership-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--brand-main);
+    margin-bottom: 0.25rem;
+  }
+
+  .membership-text {
+    font-size: 0.925rem;
+    color: var(--brand-secondary);
+    line-height: 1.55;
+  }
+
+  .insurance-btn-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Right Logos Card */
+  .insurance-logos-card {
+    background: var(--brand-bg);
+    border: 1px solid var(--brand-border);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    text-align: center;
+  }
+
+  .partners-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--brand-main);
+    margin-bottom: 0.25rem;
+  }
+
+  .partners-sub {
+    font-size: 0.85rem;
+    color: var(--brand-muted);
+    margin-bottom: 1.75rem;
+  }
+
+  .logos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .logo-box {
+    background: #ffffff;
+    border: 1px solid var(--brand-border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+  }
+
+  .partner-img {
+    max-height: 38px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .financing-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    background: var(--brand-primary-light);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    display: inline-block;
+  }
+
+  @media (max-width: 992px) {
+    .insurance-box {
+      padding: 2rem;
+    }
+    .insurance-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .insurance-btn-group {
+      flex-direction: column;
+    }
+    .insurance-btn-group .btn {
+      width: 100%;
+    }
+  }
+</style>

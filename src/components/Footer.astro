@@ -1,0 +1,322 @@
+---
+// Footer.astro
+import { Image } from 'astro:assets';
+import logoImg from '../assets/images/logo.avif';
+---
+
+<footer class="site-footer">
+  <!-- Top CTA Banner -->
+  <div class="footer-cta-strip">
+    <div class="container strip-container">
+      <div class="strip-text">
+        <h3 class="strip-heading">Experience Burbank's Modern Dental & Wellness Destination</h3>
+        <p class="strip-sub">Schedule your new patient cleaning or emergency appointment today.</p>
+      </div>
+      <div class="strip-actions">
+        <a href="https://appointments.bbdentalcare.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          Book Online Now
+        </a>
+        <a href="tel:8182563060" class="btn btn-light btn-lg">
+          Call (818) 256-3060
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-main">
+    <div class="footer-grid">
+      <!-- Column 1: Brand & Contact -->
+      <div class="footer-col brand-col">
+        <a href="https://bbdentalcare.com" class="footer-logo">
+          <Image src={logoImg} alt="BB Dental Care" width={200} height={50} class="footer-logo-img" />
+        </a>
+        <p class="brand-tagline">
+          Premier destination for gentle dentistry, facial aesthetics, and wellness care in Burbank, CA.
+        </p>
+
+        <div class="contact-details">
+          <p><strong>Address:</strong> 916 W Burbank Blvd. Suite A, Burbank, CA 91506</p>
+          <p><strong>Phone:</strong> <a href="tel:8182563060">(818) 256-3060</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@bbdentalcare.com">info@bbdentalcare.com</a></p>
+          <p><strong>Hours:</strong> Tuesday – Saturday: 8:00 AM – 5:00 PM</p>
+        </div>
+
+        <div class="social-links">
+          <a href="https://share.bbdentalcare.com/instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://share.bbdentalcare.com/facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.yelp.com/biz/bb-dental-care-burbank" target="_blank" rel="noopener noreferrer" aria-label="Yelp" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </a>
+          <a href="https://share.bbdentalcare.com/call" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Dental Services -->
+      <div class="footer-col">
+        <h4 class="col-title">Dental Services</h4>
+        <ul class="footer-nav">
+          <li><a href="https://bbdentalcare.com/services/category/general-dentistry/" target="_blank" rel="noopener noreferrer">General Dentistry</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/cosmetic-dentistry/" target="_blank" rel="noopener noreferrer">Cosmetic Dentistry</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/implant-dentistry/" target="_blank" rel="noopener noreferrer">Dental Implants</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/emergency-dentistry/" target="_blank" rel="noopener noreferrer">Emergency Dentistry</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/holistic-dentistry/" target="_blank" rel="noopener noreferrer">Holistic Dentistry</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/pediatric-dentistry/" target="_blank" rel="noopener noreferrer">Pediatric Dentistry</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/periodontics/" target="_blank" rel="noopener noreferrer">Periodontics</a></li>
+          <li><a href="https://bbdentalcare.com/services/category/minor-oral-surgery/" target="_blank" rel="noopener noreferrer">Minor Oral Surgery</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Patient Resources & Offers -->
+      <div class="footer-col">
+        <h4 class="col-title">Patient Resources</h4>
+        <ul class="footer-nav">
+          <li><a href="https://bbdentalcare.com/cleaning-offer/" target="_blank" rel="noopener noreferrer" class="offer-highlight">★ $149 Cleaning Special</a></li>
+          <li><a href="https://bbdentalcare.com/emergency-exam-offer/" target="_blank" rel="noopener noreferrer" class="offer-highlight">★ $49 Emergency Exam</a></li>
+          <li><a href="https://bbdentalcare.com/patient-info/" target="_blank" rel="noopener noreferrer">General Information</a></li>
+          <li><a href="https://bbdentalcare.com/insurance/" target="_blank" rel="noopener noreferrer">Dental Insurance & Plans</a></li>
+          <li><a href="https://bbdentalcare.com/dental-anxiety/" target="_blank" rel="noopener noreferrer">Overcoming Dental Anxiety</a></li>
+          <li><a href="https://bbdentalcare.com/testimonials/" target="_blank" rel="noopener noreferrer">Patient Testimonials</a></li>
+          <li><a href="https://bbdentalcare.com/ada/glossary/" target="_blank" rel="noopener noreferrer">ADA Dental Glossary</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Company & Practice -->
+      <div class="footer-col">
+        <h4 class="col-title">BB Dental Care</h4>
+        <ul class="footer-nav">
+          <li><a href="https://bbdentalcare.com/about-us/" target="_blank" rel="noopener noreferrer">About Dr. Bryanna & Team</a></li>
+          <li><a href="https://bbdentalcare.com/blog/" target="_blank" rel="noopener noreferrer">Dental & Wellness Blog</a></li>
+          <li><a href="https://bbdentalcare.com/branding/" target="_blank" rel="noopener noreferrer">Brand Guidelines</a></li>
+          <li><a href="https://bbdentalcare.com/contact-us/" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+          <li><a href="https://appointments.bbdentalcare.com" target="_blank" rel="noopener noreferrer">Online Appointment Portal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Legal Bar -->
+    <div class="footer-bottom">
+      <div class="bottom-legal">
+        <p>© 2026 BB Dental Care. All rights reserved. Burbank Dental Portal (burbank.dental).</p>
+      </div>
+      <div class="bottom-links">
+        <a href="https://bbdentalcare.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="https://bbdentalcare.com/legal/accessibility-statement/" target="_blank" rel="noopener noreferrer">Accessibility</a>
+        <a href="https://bbdentalcare.com/legal/terms-of-use/" target="_blank" rel="noopener noreferrer">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--brand-main);
+    color: #ffffff;
+    margin-top: auto;
+  }
+
+  .footer-cta-strip {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, #005a53 100%);
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .strip-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .strip-heading {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+  }
+
+  .strip-sub {
+    font-size: 1.05rem;
+    color: var(--brand-accent-soft);
+  }
+
+  .strip-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-main {
+    padding: 4.5rem 1.5rem 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-logo-img {
+    filter: brightness(0) invert(1);
+    height: 38px;
+    width: auto;
+  }
+
+  .brand-tagline {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-details {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .contact-details a {
+    color: var(--brand-accent);
+  }
+
+  .contact-details a:hover {
+    color: #ffffff;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.2s ease;
+  }
+
+  .social-icon:hover {
+    background: var(--brand-primary);
+    transform: translateY(-2px);
+  }
+
+  .col-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.925rem;
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+
+  .footer-nav a:hover {
+    color: var(--brand-accent);
+    transform: translateX(3px);
+  }
+
+  .offer-highlight {
+    color: #ffd27d !important;
+    font-weight: 700;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .bottom-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .bottom-links a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .bottom-links a:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+    .strip-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .strip-actions {
+      width: 100%;
+      flex-direction: column;
+    }
+    .strip-actions .btn {
+      width: 100%;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .bottom-links {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+</style>

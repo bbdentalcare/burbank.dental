@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import PortalBanner from '../components/PortalBanner.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import ExperienceAmenities from '../components/ExperienceAmenities.astro';
+import DoctorBio from '../components/DoctorBio.astro';
+import Testimonials from '../components/Testimonials.astro';
+import InsurancePricing from '../components/InsurancePricing.astro';
+import LocationContact from '../components/LocationContact.astro';
+import Footer from '../components/Footer.astro';
+import MobileStickyBar from '../components/MobileStickyBar.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Burbank Dental | BB Dental Care"
+  description="Official Burbank portal for BB Dental Care. Family, cosmetic, emergency, and biological dentistry by Dr. Bryanna Hubbard, DDS. Book appointments online or call (818) 256-3060."
+  canonicalUrl="https://burbank.dental"
+>
+  <Header />
+  <main id="main-content">
+    <Hero />
+    <PortalBanner />
+    <ServicesGrid />
+    <ExperienceAmenities />
+    <DoctorBio />
+    <Testimonials />
+    <InsurancePricing />
+    <LocationContact />
+  </main>
+  <Footer />
+  <MobileStickyBar />
+</Layout>

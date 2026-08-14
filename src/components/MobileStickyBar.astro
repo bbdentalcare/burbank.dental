@@ -1,0 +1,59 @@
+---
+// MobileStickyBar.astro
+---
+
+<div class="mobile-sticky-bar" id="mobile-sticky-bar">
+  <div class="sticky-inner">
+    <a href="tel:8182563060" class="btn btn-light sticky-call-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Call Office</span>
+    </a>
+
+    <a href="https://appointments.bbdentalcare.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary sticky-book-btn">
+      <span>Book Online</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  .mobile-sticky-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--brand-border);
+    padding: 0.75rem 1rem;
+    z-index: 99;
+    box-shadow: 0 -4px 20px rgba(15, 28, 28, 0.1);
+  }
+
+  .sticky-inner {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .sticky-call-btn, .sticky-book-btn {
+    flex: 1;
+    font-size: 0.95rem;
+    padding: 0.75rem 0.5rem;
+    box-shadow: none;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-sticky-bar {
+      display: block;
+    }
+  }
+</style>

@@ -1,0 +1,222 @@
+---
+// DoctorBio.astro
+import { Image } from 'astro:assets';
+import drBryannaImg from '../assets/images/dr-bryanna.avif';
+---
+
+<section class="doctor-section section" id="doctor">
+  <div class="container">
+    <div class="doctor-card">
+      <div class="doctor-grid">
+        <!-- Doctor Image Column -->
+        <div class="doctor-image-col">
+          <div class="image-wrapper">
+            <Image 
+              src={drBryannaImg} 
+              alt="Dr. Bryanna Hubbard, DDS" 
+              width={450} 
+              height={550} 
+              class="doctor-headshot"
+            />
+            <div class="doctor-experience-tag">
+              <span class="exp-icon">⭐️</span>
+              <div>
+                <strong class="exp-title">Dr. Bryanna Hubbard, DDS</strong>
+                <span class="exp-sub">Founder & Lead Clinician</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Bio Column -->
+        <div class="doctor-bio-col">
+          <span class="badge badge-primary">Meet Your Burbank Dentist</span>
+          <h2 class="doctor-name">
+            Compassionate Care Led by <span class="text-gradient">Dr. Bryanna Hubbard</span>
+          </h2>
+
+          <p class="doctor-text">
+            Dr. Bryanna is renowned for her gentle touch, comprehensive clinical expertise, and dedication to finding long-term dental solutions that prioritize overall wellness.
+          </p>
+
+          <p class="doctor-text">
+            Combining rigorous training from the <strong>UCLA School of Dentistry</strong> with international dental foundations in Brazil, Dr. Bryanna is fluent in <strong>English, Portuguese, and Spanish</strong>, providing culturally warm, judgment-free care to the diverse Burbank and Greater Los Angeles communities.
+          </p>
+
+          <div class="credentials-list">
+            <div class="credential-item">
+              <div class="cred-dot"></div>
+              <span>UCLA School of Dentistry Continuing Education</span>
+            </div>
+            <div class="credential-item">
+              <div class="cred-dot"></div>
+              <span>Member, San Fernando Valley Dental Society</span>
+            </div>
+            <div class="credential-item">
+              <div class="cred-dot"></div>
+              <span>Specialized in Facial Aesthetics & Biological Dentistry</span>
+            </div>
+            <div class="credential-item">
+              <div class="cred-dot"></div>
+              <span>Multilingual Practice: English, Português, Español</span>
+            </div>
+          </div>
+
+          <div class="doctor-actions">
+            <a href="https://bbdentalcare.com/about-us/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Read Full Biography & Meet Team</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="https://appointments.bbdentalcare.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Book with Dr. Bryanna
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .doctor-section {
+    background-color: var(--brand-bg);
+  }
+
+  .doctor-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--brand-border);
+    padding: 3.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .doctor-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .doctor-image-col {
+    position: relative;
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: visible;
+    background: linear-gradient(135deg, var(--brand-primary-light) 0%, #d4e8e7 100%);
+    padding: 1rem 1rem 0;
+    text-align: center;
+  }
+
+  .doctor-headshot {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .doctor-experience-tag {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--brand-main);
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+  }
+
+  .exp-title {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.2;
+  }
+
+  .exp-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--brand-accent);
+    line-height: 1.2;
+  }
+
+  .doctor-name {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+    font-weight: 800;
+    color: var(--brand-main);
+    margin: 1rem 0 1.25rem;
+    line-height: 1.2;
+  }
+
+  .doctor-text {
+    font-size: 1.05rem;
+    color: var(--brand-secondary);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .credentials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.75rem 0 2rem;
+  }
+
+  .credential-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--brand-main);
+  }
+
+  .cred-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--brand-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .doctor-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 992px) {
+    .doctor-card {
+      padding: 2rem;
+    }
+    .doctor-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .doctor-experience-tag {
+      position: static;
+      transform: none;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .doctor-actions {
+      flex-direction: column;
+    }
+    .doctor-actions .btn {
+      width: 100%;
+    }
+  }
+</style>

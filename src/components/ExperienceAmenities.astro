@@ -1,0 +1,198 @@
+---
+// ExperienceAmenities.astro
+const amenities = [
+  {
+    title: "AI-Powered Dentistry",
+    desc: "Precision diagnostics utilizing AI imaging algorithms to catch issues early and minimize invasive treatments.",
+    icon: "🤖"
+  },
+  {
+    title: "Netflix & Spotify",
+    desc: "Stream your favorite shows, podcasts, or music with noise-canceling headphones during your entire procedure.",
+    icon: "🎧"
+  },
+  {
+    title: "100% Cotton Warm Blankets",
+    desc: "Cozy plush blankets to keep you completely warm and relaxed throughout your appointment.",
+    icon: "🛋️"
+  },
+  {
+    title: "Aromatherapy & Calming Ambience",
+    desc: "Essential oil diffusers and spa scents specifically chosen to alleviate stress and dental anxiety.",
+    icon: "🌿"
+  },
+  {
+    title: "Beverage & Refreshment Bar",
+    desc: "Complimentary organic teas, espresso, and infused water in our comfortable patient lounge.",
+    icon: "☕"
+  },
+  {
+    title: "Bespoke Oral-Care Amenities",
+    desc: "Curated, high-grade holistic dental products and custom homecare regimens formulated for your smile.",
+    icon: "✨"
+  }
+];
+---
+
+<section class="experience-section section" id="amenities">
+  <div class="container">
+    <div class="experience-layout">
+      <!-- Left Info Box -->
+      <div class="experience-content">
+        <span class="badge badge-gold">The BB Dental Experience</span>
+        <h2 class="experience-title">
+          Dentistry Designed to Feel Like <span class="text-gradient">A Sanctuary</span>
+        </h2>
+        <p class="experience-text">
+          There is nothing more comforting than coming to a dental practice that feels like home. We’ve eliminated the cold clinical vibe and replaced it with a calming, spa-inspired wellness center.
+        </p>
+
+        <div class="experience-highlight-card">
+          <div class="highlight-icon">🧘</div>
+          <div>
+            <h4 class="highlight-title">Dental Anxiety Relief</h4>
+            <p class="highlight-desc">
+              Over 60% of people feel nervous at the dentist. Our gentle techniques, sedation options, and soothing amenities ensure you feel safe, calm, and respected.
+            </p>
+          </div>
+        </div>
+
+        <div class="amenities-btn-wrap">
+          <a href="https://bbdentalcare.com/dental-anxiety/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+            <span>Learn About Anxiety-Free Care</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Amenities Grid -->
+      <div class="amenities-grid">
+        {amenities.map((item) => (
+          <div class="amenity-card">
+            <div class="amenity-icon">{item.icon}</div>
+            <h3 class="amenity-title">{item.title}</h3>
+            <p class="amenity-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience-section {
+    background: #ffffff;
+    border-top: 1px solid var(--brand-border);
+    border-bottom: 1px solid var(--brand-border);
+  }
+
+  .experience-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .experience-title {
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: var(--brand-main);
+    margin: 1rem 0 1.25rem;
+    line-height: 1.2;
+  }
+
+  .experience-text {
+    font-size: 1.1rem;
+    color: var(--brand-secondary);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .experience-highlight-card {
+    background: var(--brand-bg);
+    border: 1px solid var(--brand-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .highlight-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .highlight-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-main);
+    margin-bottom: 0.35rem;
+  }
+
+  .highlight-desc {
+    font-size: 0.925rem;
+    color: var(--brand-secondary);
+    line-height: 1.55;
+  }
+
+  .amenities-btn-wrap {
+    display: flex;
+  }
+
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .amenity-card {
+    background: var(--brand-bg);
+    border: 1px solid var(--brand-border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 1.5rem;
+    transition: all 0.25s ease;
+  }
+
+  .amenity-card:hover {
+    transform: translateY(-4px);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-accent);
+  }
+
+  .amenity-icon {
+    font-size: 1.85rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .amenity-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .amenity-desc {
+    font-size: 0.9rem;
+    color: var(--brand-secondary);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 992px) {
+    .experience-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .amenities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
