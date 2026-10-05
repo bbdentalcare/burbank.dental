@@ -4,22 +4,23 @@
   --brand-primary-hover: #005f58;
   --brand-primary-dark: #004d47;
   --brand-primary-light: #e8f4f3;
-  --brand-accent: #92D8D8;
+  --brand-accent: #92d8d8;
   --brand-accent-soft: #cbdad9;
-  --brand-main: #0F1C1C;
+  --brand-main: #0f1c1c;
   --brand-secondary: #273b3b;
   --brand-muted: #415858;
-  --brand-bg: #F5F4F1;
+  --brand-bg: #f5f4f1;
   --brand-bg-white: #ffffff;
   --brand-bg-subtle: #f0eee9;
-  --brand-border: #D6E5E5;
+  --brand-border: #d6e5e5;
   --brand-border-dark: #243737;
   --brand-gold: #c98205;
   --brand-gold-bg: #fff8eb;
-  
+
   /* Typography */
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(15, 28, 28, 0.04);
@@ -37,7 +38,9 @@
   --container-max: 1200px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -62,7 +65,8 @@ body {
   background-color: var(--brand-bg);
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -71,7 +75,10 @@ img, svg {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 /* Layout Utilities */
@@ -195,7 +202,10 @@ a {
   border: 1px solid var(--brand-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   box-shadow: var(--shadow-sm);
 }
 

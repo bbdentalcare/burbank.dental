@@ -5,14 +5,14 @@
   "compatibility_date": "2026-03-17",
   "compatibility_flags": ["global_fetch_strictly_public", "nodejs_compat"],
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "routes": [
     { "pattern": "burbank.dental/*", "zone_id": "97e61eb4335398bbe9147560b242ba65" },
-    { "pattern": "www.burbank.dental/*", "zone_id": "97e61eb4335398bbe9147560b242ba65" }
+    { "pattern": "www.burbank.dental/*", "zone_id": "97e61eb4335398bbe9147560b242ba65" },
   ],
   "workers_dev": true,
   "observability": {
-    "enabled": true
-  }
+    "enabled": true,
+  },
 }

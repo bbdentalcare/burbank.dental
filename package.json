@@ -1,18 +1,26 @@
 {
   "name": "burbank-dental",
-  "type": "module",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "vp check",
+    "lint": "vp lint",
+    "fmt": "vp fmt --check",
+    "prepare": "vp config"
   },
   "dependencies": {
     "@jdevalk/astro-seo-graph": "^2.2.0",
     "@jdevalk/seo-graph-core": "^0.7.0",
     "astro": "^7.2.2",
     "schema-dts": "^2.0.0"
+  },
+  "devDependencies": {
+    "vite-plus": "catalog:",
+    "vite-plus-commitlint": "^1.1.3"
   }
 }
